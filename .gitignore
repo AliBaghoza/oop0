@@ -1,0 +1,32 @@
+# VS Core
+.vs/
+*.user
+*.suo
+*.sln.docstates
+
+# Build Outputs
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+x64/
+x86/
+*.exe
+*.dll
+*.lib
+*.pdb
+*.ilk
+
+# Intermediate Files
+ipch/
+[Oo]bj/
+*.tlog
+*.log
+
+# System
+Thumbs.db
+.DS_Store
+
+# Backup files
+*~
+*.bak
+*.tmp
