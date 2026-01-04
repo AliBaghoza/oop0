@@ -322,6 +322,23 @@ public:
 
         return min;
     }
+    static float  MiniNumberInArray(float arr[100], short arrLength)
+    {
+        float min = 0;
+
+
+        min = arr[0];
+
+        for (int i = 1; i < arrLength; i++)
+        {
+
+            if (arr[i] < min)
+                min = arr[i];
+
+        }
+
+        return min;
+    }
 
     static int NaxNumberInArray(int array[100], short length)
     {
