@@ -209,7 +209,7 @@ public:
 		return NumberOfSecondsInAMonth(Month, Year);
 	}
 	
-	// Day Name #7
+	// Day Name 
 	static short DayOfWeekOrder(short Day, short Month, short Year)
 	{
 		short a, y, m;
@@ -265,7 +265,7 @@ public:
 		return MonthShortName(Month);
 	}
 
-	// Month Calendar #8
+	// Month Calendar
 	static void PrintMonthCalendar(short Month, short Year)
 	{
 		int NumberOfDays;
@@ -304,7 +304,7 @@ public:
 		PrintMonthCalendar(Month, Year);
 	}
 	
-	// Year Calendar  #9
+	// Year Calendar 
 	static void PrintYearCalendar(short Year)
 	{
 		printf("\n  _________________________________\n\n");
@@ -321,7 +321,7 @@ public:
 		PrintYearCalendar(Year);
 	}
 	
-	// Days from the beginning of Year  #10
+	// Days from the beginning of Year
 	static short NumberOfDaysFromTheBeginingOfTheYear(short Day, short Month, short Year)
 	{
 		short TotalDays = 0;
@@ -451,7 +451,7 @@ public:
 		return IsLastMonthInYear(Month);
 	}
 	
-	// Increase Date By One Day  #16
+	// Increase Date By One Day 
 	static clsDate AddOneDay(clsDate Date)
 	{
 		if (IsLastDayInMonth(Date))
@@ -479,13 +479,13 @@ public:
 		*this = AddOneDay(*this);
 	}
 
-	//#Problem 18 : Your Age In Days
+	// Your Age In Days
 	static int CalculateMyAgeInDays(clsDate DateOfBirth)
 	{
 		return GetDifferenceInDays(DateOfBirth, GetSystemDate() , true);
 	}
   
-	//Diff In Days (Negative Days)  #17 and #19
+	//Diff In Days (Negative Days)  
 	static void SwapDates(clsDate& Date1, clsDate& Date2)
 	{
 		clsDate TempDate;
@@ -523,7 +523,7 @@ public:
 		return GetDifferenceInDays(*this , Date2 , IncludeEndDay);
 	}
     
-	// Increase Date Problems #20-32
+	// Increase Date 
 	static clsDate IncreaseDateByXDays(short Days, clsDate Date)
 	{
 		for (short i = 1; i <= Days; i++)
@@ -687,7 +687,7 @@ public:
 	}
 	//***************************
 
-	//Decrease Date Problems  33 to 46
+	//Decrease Date 
 	static clsDate DecreaseDateByOneDay(clsDate Date)
 	{
 		if (Date.Day == 1)
@@ -871,7 +871,7 @@ public:
 	}
 	//=============================================================================
 
-	// Problems 47 to 53 : More Date Problems  
+	
 	static bool IsEndOfWeek(clsDate Date)
 	{
 		return DayOfWeekOrder(Date) == 7;
@@ -965,7 +965,7 @@ public:
 	{
 		*this = CalculateVacationReturnDate(*this, VacationDays);
 	}
-	// #56
+	
 	static bool IsDate1AfterDate2(clsDate Date1, clsDate Date2)
 	{
 		return (!IsDate1BeforeDate2(Date1, Date2)

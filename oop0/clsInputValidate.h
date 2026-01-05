@@ -62,40 +62,24 @@ public:
         return Number;
     }
    
-    static int ReadPositiveIntNumber(string Message)
+    static int ReadPositiveIntNumber()
     {
         int Number = 0;
 
         do
         {
-            cout << Message << endl;
-            cin >> Number;
-            while (cin.fail())
-            {
-                cin.clear();
-                cin.ignore(numeric_limits<streamsize>::max(), '\n');
-                cout << "Invalid Number, Enter a valid one:" << endl;
-                cin >> Number;
-            }
+            Number = ReadIntNumber();
 
         } while (Number <= 0);
         return Number;
     }
-    static double ReadPositiveDblNumber(string Message)
+    static double ReadPositiveDblNumber()
     {
         double Number = 0;
 
         do
         {
-            cout << Message << endl;
-            cin >> Number;
-            while (cin.fail())
-            {
-                cin.clear();
-                cin.ignore(numeric_limits<streamsize>::max(), '\n');
-                cout << "Invalid Number, Enter a valid one:" << endl;
-                cin >> Number;
-            }
+            Number = ReadDblNumber();
 
         } while (Number <= 0);
         return Number;
@@ -126,6 +110,52 @@ public:
 
     }
     
+    static void ReadArray(int array[100], short & arrLength)
+    {
+        cout << "\nEnter number of elements:\n";
+        arrLength = ReadPositiveIntNumber();
+
+        cout << "\nEnter array elements: \n";
+        int Number = 0;
+        for (int i = 0; i < arrLength; i++)
+        {
+            cout << "Element [" << i + 1 << "]:";
+            Number = ReadIntNumber();
+            array[i] = Number ;
+
+        }
+        
+    }
+    static void ReadArray(double array[100], short& arrLength)
+    {
+        cout << "\nEnter number of elements:\n";
+        arrLength = ReadPositiveIntNumber();
+
+        cout << "\nEnter array elements: \n";
+        double Number = 0;
+        for (int i = 0; i < arrLength; i++)
+        {
+            cout << "Element [" << i + 1 << "]:";
+            Number = ReadDblNumber();
+            array[i] = Number;
+
+        }
+       
+    }
+    static void ReadArray(string array[100], short& arrLength)
+    {
+        cout << "\nEnter number of elements:\n";
+        arrLength = ReadPositiveIntNumber();
+
+        cout << "\nEnter array elements: \n";
+        for (int i = 0; i < arrLength; i++)
+        {
+            cout << "Element [" << i + 1 << "]:";
+            cin >> array[i];
+        }
+        
+    }
+
     static bool IsValidDate(clsDate Date)
     {
        return clsDate::IsValidDate(Date);

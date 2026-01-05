@@ -241,18 +241,6 @@ public:
         }
 
     }
-    //============================================
-    static int ReadArray(short length)
-    {
-        int array[100];
-        for (int i = 0; i < length; i++)
-        {
-            cout << "Element [" << i << "]:";
-            cin >> array[i];
-
-        }
-
-    }
 
     static void PrintArray(int array[100], short length)
     {
@@ -261,6 +249,7 @@ public:
             cout << array[i] << " ";
 
         }
+        cout << endl;
     }
     static void PrintArray(float array[100], short length)
     {
@@ -269,6 +258,7 @@ public:
             cout << array[i] << " ";
 
         }
+        cout << endl;
     }
     static void PrintArray(double array[100], short length)
     {
@@ -277,6 +267,7 @@ public:
             cout << array[i] << " ";
 
         }
+        cout << endl;
     }
     static void PrintArray(string array[100], short length)
     {
@@ -285,6 +276,7 @@ public:
             cout << array[i] << " ";
 
         }
+        cout << endl;
     }
    
 
