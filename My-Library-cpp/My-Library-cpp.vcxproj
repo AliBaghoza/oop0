@@ -22,7 +22,7 @@
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
     <ProjectGuid>{71952cd8-0b5f-4d32-922b-7f98b9a52175}</ProjectGuid>
-    <RootNamespace>oop0</RootNamespace>
+    <RootNamespace>My-Library-cpp</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
     <ProjectName>My Library (cpp)</ProjectName>
   </PropertyGroup>
