@@ -393,28 +393,29 @@ public:
         //if you reached here, this means the number is not found
         return -1;
     }
-   
+
     static bool IsNumberInArray(int Number, int arr[100], int arrLength)
     {
         return FindNumberPositionInArray(Number, arr, arrLength) != -1;
     }
 
-    //==============
-    static short readNumberPositiv(string massge)
+
+    static enum enchekPrimeNum { Prime, notPrime };
+
+    static enchekPrimeNum ChekPrimeNum(int number)
     {
-        short num = 0;
-        do
+        int num = round(number / 2);
+
+        for (int i = 2; i <= num; i++)
         {
+            if (number % i == 0)
+                return enchekPrimeNum::notPrime;
 
-            cout << massge << endl;
-            cin >> num;
-        } while (num <= 0);
+        }
 
-        return num;
+        return enchekPrimeNum::Prime;
+
     }
-    //==============
-
-
 
     static void ResetScreen() {
         system("color F");
